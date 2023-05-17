@@ -1,0 +1,10 @@
+Admin
+    user: admin@email.com
+    pass: admin
+
+Users
+    user: userA@email.com
+    pass: userA
+
+    user: userB@email.com
+    pass: userB

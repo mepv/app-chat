@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "728f77bf-6e50-47df-bd10-11b4d0c584b3",
+		"name": "AppChat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13208013"
+	},
+	"item": [
+		{
+			"name": "auth-server",
+			"item": [
+				{
+					"name": "auth-server Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "user-client-app",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "9999",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "Z9I3AGyJPV7ks13Mro8d0z3JttTe9UMtpA3dKK-S90wMwn9TqfW2uFQrz2S9yS2fGA9_3vwv_m5ONYcXzcg1d1N6wNMIEE1YOZKmwGJNlSP1WeQ78LAFmIjyapkYJSke",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://oidcdebugger.com/debug",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:9090/auth-server/oauth2/token",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"auth-server",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AppChat - Preguntas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ4NXQjUzI1NiI6IjhKYzZtelFyZmdGSHpTWVRzckc0U19lbGVtejVuWG9EVGh0bFFVMi1JWmsiLCJraWQiOiJhY2NlbnR1cmUuY2hhdCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJhdWQiOiJ1c2VyLWNsaWVudC1hcHAiLCJuYmYiOjE2ODQzNTE0OTcsInNjb3BlIjpbInJlYWQiXSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0Ojg0NDEiLCJleHAiOjE2ODQzNTIwOTcsImlhdCI6MTY4NDM1MTQ5N30.KexUtjt_TTzgxNm2vgIusy_zBLMaWc73zVMQ6F7sfS3awk7kASsyw2lI8sqau1lVxZAkrJhWUZ0J1ysIt83ucfOrgb84LJ9Jbf7C8KqYaBGBCbUixlC_FEDQfNzWYqvf6delRFzMinexPFqDP1z8VtcyYVaYtiGjU4xI4G1kJOWf1X3r_9Gtmxhcnrim136fMKAfUNdmG3uz1P4KrhiZgomVIsci5qmqxYreJaQBsd35jFPsHErXcooZO0pmtaCZF3ZIU32dZKaQnYIMVQOc9nYG36dl52M_kyYor0W03Qry_xl4wdPZNPsVbIQxO9yXFfG4WB0a7qZ4gih7LeKUPQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:9090/app-chat-service/api/v1/questions/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"app-chat-service",
+						"api",
+						"v1",
+						"questions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AppChat - Crear una nueva pregunta",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ4NXQjUzI1NiI6IjhKYzZtelFyZmdGSHpTWVRzckc0U19lbGVtejVuWG9EVGh0bFFVMi1JWmsiLCJraWQiOiJhY2NlbnR1cmUuY2hhdCIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiJhZG1pbkBlbWFpbC5jb20iLCJhdWQiOiJ1c2VyLWNsaWVudC1hcHAiLCJuYmYiOjE2ODMzOTU0NzksInNjb3BlIjpbInJlYWQiXSwicm9sZXMiOlsiUk9MRV9BRE1JTiJdLCJpc3MiOiJodHRwOi8vbG9jYWxob3N0Ojg0NDEiLCJleHAiOjE2ODMzOTYwNzksImlhdCI6MTY4MzM5NTQ3OX0.GF1tvFz0g8P0VDRg_WHfU4Ja5ObG5rydlUIF64_bJTdOcIeAMEOhaEbX7-SZk5io_oK2oakHNQNip-8MKHLzTDyWldcxcQhmlLhkWUxGHBs7ZZaMxZCHebz9Tt_AZ8CRGpqMxYt-2AyiB74G5BChIJUgk6A1Xetrufo51YMe-cyu1bg-Aem4fYeBtiHcTTyt9rO-_ovPtr14fnhRiXBR7Exqeit6f6lcf2XJjYyDCMCgHeEteKTtdTMTO_6bScQcqu-GtHa8dYYWWvUbm-TdWNeSzcFZGbaMIQRiUTvZVTcosxmViExtQZbrtkeBpsWOS9ohbIX2Af6ZPOS2qEFlhQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"question\": \"¿Capital de Venezuela?\",\n    \"answer\": \"Caracas\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/app-chat-service/api/v1/questions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"app-chat-service",
+						"api",
+						"v1",
+						"questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing service - Actualizar costo/inflación pregunta",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"questionValue\": 110,\n    \"rate\": 5.10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/billing-service/api/v1/billing/update-values",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"billing-service",
+						"api",
+						"v1",
+						"billing",
+						"update-values"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Billing service - Costo de las consultas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"count\": 5,\n    \"rate\": 50\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9090/billing-service/api/v1/billing",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"billing-service",
+						"api",
+						"v1",
+						"billing"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

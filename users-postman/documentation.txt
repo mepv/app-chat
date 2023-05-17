@@ -1,0 +1,9 @@
+Postman collection se encuentra en la carpeta users-postman
+
+- En postman en el request AppChat - Preguntas
+
+- Pasar por path variable el número de la pregunta a consultar, existen en memoria 3 preguntas, se pueden agregar preguntas nuevas usando el request AppChat - Crear una nueva pregunta
+
+- Actualizar valores por pregunta e inflación con el request Billing service - Actualizar costo/inflación pregunta
+
+- Para consultar el valor total de las preguntas realizadas con el request Billing service - Costo de las consultas
